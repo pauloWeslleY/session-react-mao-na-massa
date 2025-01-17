@@ -1,0 +1,32 @@
+.containerPaginaNaoEncontrada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: calc(100vh - 60px);
+  width: 100%;
+}
+
+.containerPaginaNaoEncontrada span {
+  font-size: 145px;
+  font-weight: 600;
+  color: #424efc;
+}
+
+.containerPaginaNaoEncontrada a.linkPaginaNaoEncontrada {
+  text-decoration: none;
+  background-color: #424efc;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 5px;
+  transition: transform 0.2s ease;
+}
+
+.containerPaginaNaoEncontrada a.linkPaginaNaoEncontrada:hover {
+  transform: translateY(-5px);
+}

@@ -1,17 +1,16 @@
-import { NavLink } from "react-router";
-import "./styles.css";
+import { Link } from "react-router";
+import "./header.css";
 
 export default function Header() {
   return (
     <header>
-      <h2>John doe</h2>
+      <Link className="logo" to="/">
+        Prime Flix
+      </Link>
 
-      <nav className="menuNav">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/contato">Contato</NavLink>
-        <NavLink to="/sobre">Sobre</NavLink>
-        <NavLink to="/posts">App</NavLink>
-      </nav>
+      <Link className="favoritos" to="/favoritos">
+        Meus Filmes
+      </Link>
     </header>
   );
 }

@@ -1,25 +1,27 @@
 import { useRoutes } from "react-router";
-import Posts from "./_components/posts";
-import Sobre from "./pages/sobre";
+import Filmes from "./pages/filmes";
 import Home from "./pages/home";
-import Contato from "./pages/contato";
-import Header from "./_components/header";
-import NotFound from "./pages/not-found";
+import PaginaNaoEncontrada from "./pages/pagina-nao-encontrada";
+import Favoritos from "./pages/favoritos";
 
 export default function MainRoutes() {
-  const routes = useRoutes([
-    { path: "/", element: <Home /> },
-    { path: "/contato", element: <Contato /> },
-    { path: "/sobre", element: <Sobre /> },
-    { path: "/posts", element: <Posts /> },
-    { path: "*", element: <NotFound /> },
+  return useRoutes([
+    {
+      path: "/",
+      element: <Home />,
+      index: true,
+    },
+    {
+      path: "/filme/:filmeId",
+      element: <Filmes />,
+    },
+    {
+      path: "/favoritos",
+      element: <Favoritos />,
+    },
+    {
+      path: "*",
+      element: <PaginaNaoEncontrada />,
+    },
   ]);
-
-  return (
-    <>
-      <Header />
-
-      {routes}
-    </>
-  );
 }
