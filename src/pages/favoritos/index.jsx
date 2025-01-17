@@ -1,9 +1,7 @@
-import { useState } from "react";
-import "./favoritos.css";
-import { useEffect } from "react";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router";
 import { toast } from "react-toastify";
+import "./favoritos.css";
 
 export default function Favoritos() {
   const [filmesFavoritos, setFilmesFavoritos] = useState([]);

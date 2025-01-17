@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
+import { toast } from "react-toastify";
 import { filmesServices } from "../../services/filmes.services";
 import "./filme-info.css";
-import { toast } from "react-toastify";
 
 export default function Filmes() {
   const [dadosFilme, setDadosFilme] = useState(null);
